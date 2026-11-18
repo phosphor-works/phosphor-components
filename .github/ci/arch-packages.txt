@@ -1,0 +1,32 @@
+# SPDX-FileCopyrightText: 2026 fuddlesworth
+# SPDX-License-Identifier: LGPL-2.1-or-later
+#
+# The Arch packages CI installs to configure, build and test phosphor-components
+# and phosphor-libs under it. One package per line. A comment after `#` is
+# ignored.
+base-devel
+git
+ccache
+cmake
+ninja
+extra-cmake-modules
+qt6-base
+qt6-declarative
+qt6-shadertools
+qt6-svg
+qt6-wayland
+wayland
+wayland-protocols
+# lupdate and lrelease, for the components' catalog.
+qt6-tools
+# Qt declares QVulkanInstance only when the Vulkan headers are present, and
+# phosphor-libs' phosphor-surfaces uses it wherever Qt was built with Vulkan.
+vulkan-headers
+# KF6: the components draw through Kirigami. KGlobalAccel and PlasmaActivities
+# are optional lookups in phosphor-libs, installed so CI builds what they
+# switch on.
+kirigami
+kglobalaccel
+plasma-activities
+# The offscreen tests' runtime.
+mesa
