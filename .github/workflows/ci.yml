@@ -129,8 +129,11 @@ jobs:
               BASE="${{ github.event.pull_request.base.sha }}"
               git cat-file -e "$BASE^{commit}" 2>/dev/null || git fetch origin "$BASE"
               RANGE="$BASE...HEAD"
-          else
+          elif git rev-parse --verify --quiet HEAD~1 > /dev/null; then
               RANGE="HEAD~1...HEAD"
+          else
+              # A root commit has no parent: every file in it is new.
+              RANGE="$(git hash-object -t tree /dev/null)...HEAD"
           fi
           echo "Diff range: $RANGE"
           git diff --name-only --diff-filter=ACMR "$RANGE" -- \
