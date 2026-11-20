@@ -49,10 +49,10 @@ set(PHOSPHOR_COMPONENTS_DEPS phosphor-libs)
 # The phosphor-libs commit (LGPL-2.1-or-later, phosphor-works/phosphor-libs)
 # phosphor-components builds against. A commit, not a release, so VERSION is
 # the commit hash.
-set(PHOSPHOR_COMPONENTS_DEP_phosphor-libs_VERSION "3d4654ea36a3d1e5d9cdeeebab3b39aecfde0cf3")
-set(PHOSPHOR_COMPONENTS_DEP_phosphor-libs_URL "https://github.com/phosphor-works/phosphor-libs/archive/3d4654ea36a3d1e5d9cdeeebab3b39aecfde0cf3.tar.gz")
-set(PHOSPHOR_COMPONENTS_DEP_phosphor-libs_FILE "phosphor-libs-3d4654ea36a3d1e5d9cdeeebab3b39aecfde0cf3.tar.gz")
-set(PHOSPHOR_COMPONENTS_DEP_phosphor-libs_SHA256 "34fdd79c5216dd4133edb917f0ac4d77de113522d73d05c85cedc6f4572f21cf")
+set(PHOSPHOR_COMPONENTS_DEP_phosphor-libs_VERSION "435beef0470229525bd0675c11422f262d4c9582")
+set(PHOSPHOR_COMPONENTS_DEP_phosphor-libs_URL "https://github.com/phosphor-works/phosphor-libs/archive/435beef0470229525bd0675c11422f262d4c9582.tar.gz")
+set(PHOSPHOR_COMPONENTS_DEP_phosphor-libs_FILE "phosphor-libs-435beef0470229525bd0675c11422f262d4c9582.tar.gz")
+set(PHOSPHOR_COMPONENTS_DEP_phosphor-libs_SHA256 "7655c619c6721b42db7d5424f47aad94daa5ce40e9e021349b74cd21c1677e31")
 
 # CPM.cmake itself, the same release phosphor-libs pins, so that tree uses
 # this copy.

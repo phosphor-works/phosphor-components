@@ -37,11 +37,11 @@ let
   # archive file itself.
   depsArchives = linkFarm "phosphor-components-deps-archives" [
     {
-      name = "phosphor-libs-3d4654ea36a3d1e5d9cdeeebab3b39aecfde0cf3.tar.gz";
+      name = "phosphor-libs-435beef0470229525bd0675c11422f262d4c9582.tar.gz";
       path = fetchurl {
-        url = "https://github.com/phosphor-works/phosphor-libs/archive/3d4654ea36a3d1e5d9cdeeebab3b39aecfde0cf3.tar.gz";
-        # sha256 34fdd79c5216dd4133edb917f0ac4d77de113522d73d05c85cedc6f4572f21cf
-        hash = "sha256-NP3XnFIW3UEz7bkX8KxNd94RNSLXPQXIXO3G9FcvIc8=";
+        url = "https://github.com/phosphor-works/phosphor-libs/archive/435beef0470229525bd0675c11422f262d4c9582.tar.gz";
+        # sha256 7655c619c6721b42db7d5424f47aad94daa5ce40e9e021349b74cd21c1677e31
+        hash = "sha256-dlXGGcZyG0LbfVQk9HqtlNqlzkDp4CE0m3TNIcFnfjE=";
       };
     }
     {
@@ -61,11 +61,11 @@ let
       };
     }
     {
-      name = "phosphor-surface-packs-e89d9f7bb6320eab8b6a0b3325858d2ca5356ce3.tar.gz";
+      name = "phosphor-surface-packs-087bd740eb0650b5a4256566663d8332d00c7cd7.tar.gz";
       path = fetchurl {
-        url = "https://github.com/phosphor-works/phosphor-surface-packs/archive/e89d9f7bb6320eab8b6a0b3325858d2ca5356ce3.tar.gz";
-        # sha256 fbbf0b9849d83396029bc4e310c3dcac49c08758e73d560538888e685f0a5e30
-        hash = "sha256-+78LmEnYM5YCm8TjEMPcrEnAh1jnPVYFOIiOaF8KXjA=";
+        url = "https://github.com/phosphor-works/phosphor-surface-packs/archive/087bd740eb0650b5a4256566663d8332d00c7cd7.tar.gz";
+        # sha256 2b3244bbd1d198cc9361dea105b01bfbcd32bbe35843ddd392881208370b40e1
+        hash = "sha256-KzJEu9HRmMyTYd6hBbAb+80yu+NYQ93TkogSCDcLQOE=";
       };
     }
   ];
