@@ -12,7 +12,7 @@
 #
 # The strings go through qsTr(), each component's file name being its context,
 # into this library's own catalog, translations/phosphor-components_<lang>.ts,
-# installed to share/phosphor-components/translations.
+# installed to the suite's shared share/phosphor-works/translations.
 
 cmake_minimum_required(VERSION 3.16)
 
@@ -160,7 +160,7 @@ if(TARGET Qt6::lrelease AND PHOSPHOR_COMPONENTS_TS_FILES)
         QM_FILES_OUTPUT_VARIABLE PHOSPHOR_COMPONENTS_QM_FILES
     )
     install(FILES ${PHOSPHOR_COMPONENTS_QM_FILES}
-        DESTINATION ${KDE_INSTALL_DATADIR}/phosphor-components/translations)
+        DESTINATION ${KDE_INSTALL_DATADIR}/${PHOSPHOR_SUITE_DIRECTORY_NAME}/translations)
 endif()
 
 # ═══════════════════════════════════════════════════════════════════════════════

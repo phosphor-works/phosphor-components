@@ -73,6 +73,9 @@ endif()
 
 include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/PhosphorComponentsDependencies.cmake")
 phosphor_components_add_phosphor_libs()
+# The suite folder's name (PHOSPHOR_SUITE_DIRECTORY_NAME), defined once in
+# phosphor-libs: the catalog installs into the suite's shared translations.
+include("${PHOSPHOR_LIBS_CMAKE_DIR}/PhosphorSuite.cmake")
 list(APPEND CMAKE_MODULE_PATH "${PHOSPHOR_LIBS_CMAKE_DIR}")
 
 add_subdirectory(libs/phosphor-components) # Phosphor.Components QML module and its catalog
