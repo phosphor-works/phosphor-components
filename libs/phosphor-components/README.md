@@ -59,7 +59,7 @@ catalog once its QCoreApplication exists:
 ```cpp
 auto* translator = new QTranslator(app);
 if (translator->load(QLocale(), QStringLiteral("phosphor-components"), QStringLiteral("_"),
-                     QStringLiteral("/usr/share/phosphor-components/translations"))) {
+                     QStringLiteral("/usr/share/phosphor-works/translations"))) {
     app->installTranslator(translator);
 }
 ```

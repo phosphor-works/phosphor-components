@@ -211,7 +211,7 @@ jobs:
           test -n "$module" || { echo "::error::the package installed no Phosphor.Components module"; exit 1; }
           echo "Module: $(dirname "$module")"
           ls "$(dirname "$module")"
-          test -e result/share/phosphor-components/translations/phosphor-components_en.qm \
+          test -e result/share/phosphor-works/translations/phosphor-components_en.qm \
             || { echo "::error::the package installed no phosphor-components catalog"; exit 1; }
 
       - name: Verify the dev shell
