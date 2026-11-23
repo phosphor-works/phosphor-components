@@ -37,11 +37,11 @@ let
   # archive file itself.
   depsArchives = linkFarm "phosphor-components-deps-archives" [
     {
-      name = "phosphor-libs-e6e4322929b103b3dd08febd51a2a616c477187b.tar.gz";
+      name = "phosphor-libs-13fa503ea008241dd0eb13c9aa8a56910fb208b9.tar.gz";
       path = fetchurl {
-        url = "https://github.com/phosphor-works/phosphor-libs/archive/e6e4322929b103b3dd08febd51a2a616c477187b.tar.gz";
-        # sha256 508b16cb46a133b9bc1d9d3c48c7793df78441a1bbcf19dda68274a2823d9ae6
-        hash = "sha256-UIsWy0ahM7m8HZ08SMd5PfeEQaG7zxndpoJ0ooI9muY=";
+        url = "https://github.com/phosphor-works/phosphor-libs/archive/13fa503ea008241dd0eb13c9aa8a56910fb208b9.tar.gz";
+        # sha256 ff6ab9d4d5792fa1525259958237eb6cd49343cefcea105695e2ef8a23062bb6
+        hash = "sha256-/2q51NV5L6FSUlmVgjfrbNSTQ8786hBWleLviiMGK7Y=";
       };
     }
     {
