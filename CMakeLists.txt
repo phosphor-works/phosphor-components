@@ -9,7 +9,9 @@
 # then the library. An app that adds it as a subproject (PlasmaZones) has added
 # phosphor-libs already, and its pin is the one in use.
 
-cmake_minimum_required(VERSION 3.16)
+# 3.23: the phosphor-libs tree added below asks for it (target_sources with
+# FILE_SET). The presets (CMakePresets.json) need 3.25.
+cmake_minimum_required(VERSION 3.23)
 
 project(PhosphorComponents VERSION 0.1.0 LANGUAGES C CXX)
 

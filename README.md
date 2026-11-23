@@ -13,9 +13,10 @@ The library lives in `libs/phosphor-components/`.
 
 ## Build
 
-Needs what phosphor-libs needs (CMake 3.25, Qt 6.10 with its private headers, extra-cmake-modules, Wayland), plus
-KF6 Kirigami and the Qt Linguist tools. The first configure downloads the phosphor-libs commit that
-`cmake/PhosphorComponentsDependencies.cmake` pins, and the archives that commit pins, into `.cache/cpm`.
+Needs what phosphor-libs needs (CMake 3.23, 3.25 for the presets below, Qt 6.10 with its private headers,
+extra-cmake-modules, Wayland), plus KF6 Kirigami and the Qt Linguist tools. The first configure downloads the
+phosphor-libs commit that `cmake/PhosphorComponentsDependencies.cmake` pins, and the archives that commit pins, into
+`.cache/cpm`.
 
 ```sh
 cmake --workflow --preset dev

@@ -29,7 +29,7 @@
 let
   # The pinned phosphor-libs commit (cmake/PhosphorComponentsDependencies.cmake)
   # and the archives that commit pins in its cmake/PhosphorDependencies.cmake:
-  # Luau and valijson, and the surface packs its test suite reads. The sandbox
+  # Luau and jsoncons, and the surface packs its test suite reads. The sandbox
   # has no network, so they are fetched here as fixed-output derivations and
   # handed to CMake as one directory (PHOSPHOR_DEPS_ARCHIVES), each under the
   # FILE name its pin gives it. CMake checks each against the pin's hash again
@@ -37,11 +37,11 @@ let
   # archive file itself.
   depsArchives = linkFarm "phosphor-components-deps-archives" [
     {
-      name = "phosphor-libs-435beef0470229525bd0675c11422f262d4c9582.tar.gz";
+      name = "phosphor-libs-13fa503ea008241dd0eb13c9aa8a56910fb208b9.tar.gz";
       path = fetchurl {
-        url = "https://github.com/phosphor-works/phosphor-libs/archive/435beef0470229525bd0675c11422f262d4c9582.tar.gz";
-        # sha256 7655c619c6721b42db7d5424f47aad94daa5ce40e9e021349b74cd21c1677e31
-        hash = "sha256-dlXGGcZyG0LbfVQk9HqtlNqlzkDp4CE0m3TNIcFnfjE=";
+        url = "https://github.com/phosphor-works/phosphor-libs/archive/13fa503ea008241dd0eb13c9aa8a56910fb208b9.tar.gz";
+        # sha256 ff6ab9d4d5792fa1525259958237eb6cd49343cefcea105695e2ef8a23062bb6
+        hash = "sha256-/2q51NV5L6FSUlmVgjfrbNSTQ8786hBWleLviiMGK7Y=";
       };
     }
     {
@@ -53,11 +53,11 @@ let
       };
     }
     {
-      name = "valijson-1.1.3.tar.gz";
+      name = "jsoncons-1.10.0.tar.gz";
       path = fetchurl {
-        url = "https://github.com/tristanpenman/valijson/archive/refs/tags/v1.1.3.tar.gz";
-        # sha256 887b53b1a924f6fe0b35fa3bbc9bbbe5ae8c72097b7f0f7c17b45f4cfa646029
-        hash = "sha256-iHtTsakk9v4LNfo7vJu75a6Mcgl7fw98F7RfTPpkYCk=";
+        url = "https://github.com/danielaparker/jsoncons/archive/refs/tags/v1.10.0.tar.gz";
+        # sha256 c829350a2eece662beb378143e2ab1c1cbb07d703687bf168626665a8a7d8bc1
+        hash = "sha256-yCk1Ci7s5mK+s3gUPiqxwcuwfXA2h78WhiZmWop9i8E=";
       };
     }
     {
@@ -150,7 +150,7 @@ stdenv.mkDerivation {
     license = with lib.licenses; [
       lgpl21Plus
       mit
-      bsd2
+      boost
     ];
     platforms = [
       "x86_64-linux"
