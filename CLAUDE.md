@@ -82,8 +82,9 @@ ctest --test-dir build -R <name>         # one test
 
 `phosphor-works:build` has the rest: the memory cap, the warning check and the offline archives. The first configure
 downloads the pinned phosphor-libs into `.cache/cpm`. CI runs the `dev` workflow on Arch with
-`QT_QPA_PLATFORM=offscreen`, a clang-format and qmlformat lint over the changed files, and the Nix flake. This
-repository has no lefthook setup, so run `qmlformat -i` on the QML you change.
+`QT_QPA_PLATFORM=offscreen`, a clang-format and qmlformat lint over the changed files, and the Nix flake. The
+shared git hooks (`lefthook.yml`, set up by `lefthook install` or `workspace/tools/setup`) run clang-format and
+qmlformat on the staged files and check the commit message.
 
 - `test_components_load` loads every file of the module in a plain engine with the static plugin linked, and with
   `org.phosphor.animation` when phosphor-libs is in the tree. It reads the file list from CMake.
