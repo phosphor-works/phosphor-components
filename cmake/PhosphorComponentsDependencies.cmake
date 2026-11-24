@@ -3,7 +3,7 @@
 #
 # What phosphor-components builds from that is not in this repository: the
 # phosphor-libs commit it builds against, pinned to its archive by version,
-# URL and SHA-256. This file is the only place the pin lives. The phosphor-libs
+# URL and SHA-256. nix/package.nix repeats the pin, so change both. The phosphor-libs
 # tree pins its own third-party sources (Luau, jsoncons) in its
 # cmake/PhosphorDependencies.cmake, at the commit pinned here.
 #
