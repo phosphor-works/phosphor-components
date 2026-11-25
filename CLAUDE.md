@@ -53,7 +53,7 @@ ctest --test-dir build -R <name>         # one test
 
 `phosphor-works:build` has the rest: the memory cap, the warning check and the offline archives. The first configure
 downloads the pinned phosphor-libs into `.cache/cpm`. CI is the shared C++ CI of the workspace
-repository (`cpp-ci.yml`): the `dev` preset on Arch with `QT_QPA_PLATFORM=offscreen`, and the Nix flake.
+repository (`cpp-ci.yml`): the `dev` preset on Arch and on Fedora 44, with `QT_QPA_PLATFORM=offscreen`, and the Nix flake.
 
 - `test_components_load` loads every file of the module in a plain engine with the static plugin linked, and with
   `org.phosphor.animation` when phosphor-libs is in the tree. It reads the file list from CMake.

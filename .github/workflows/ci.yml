@@ -30,6 +30,8 @@ jobs:
     uses: phosphor-works/workspace/.github/workflows/cpp-ci.yml@v1
     with:
       pin-file: cmake/PhosphorComponentsDependencies.cmake
+      # PlasmaZones, which ships on Fedora, builds these components.
+      fedora: true
       nix-verify: |
         module=$(find result/lib -path '*/Phosphor/Components/qmldir' | head -1)
         test -n "$module" || { echo "::error::the package installed no Phosphor.Components module"; exit 1; }
