@@ -1,0 +1,35 @@
+# SPDX-FileCopyrightText: 2026 Phosphor Works Team
+# SPDX-License-Identifier: LGPL-2.1-or-later
+#
+# The Fedora packages CI installs to configure, build and test
+# phosphor-components and phosphor-libs under it. One package per line. A
+# comment after `#` is ignored.
+gcc-c++
+git
+ccache
+cmake
+ninja-build
+extra-cmake-modules
+qt6-qtbase-devel
+qt6-qtbase-private-devel
+qt6-qtdeclarative-devel
+qt6-qtshadertools-devel
+qt6-qtsvg-devel
+qt6-qtwayland-devel
+wayland-devel
+wayland-protocols-devel
+# lupdate and lrelease, for the components' catalog.
+qt6-qttools-devel
+# Qt declares QVulkanInstance only when the Vulkan headers are present, and
+# phosphor-libs' phosphor-surfaces uses it wherever Qt was built with Vulkan.
+vulkan-headers
+# KF6: the components draw through Kirigami. KGlobalAccel and PlasmaActivities
+# are optional lookups in phosphor-libs, installed so CI builds what they
+# switch on.
+kf6-kirigami-devel
+kf6-kglobalaccel-devel
+plasma-activities-devel
+# The test bus and the offscreen tests' runtime.
+dbus-daemon
+mesa-dri-drivers
+mesa-libEGL
