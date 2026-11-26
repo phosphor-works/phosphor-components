@@ -40,6 +40,7 @@ as a static module. Other hosts can use the installed plugin. It builds on phosp
 | `PhosphorComponentsQmlplugin` | Its generated static plugin. A host links it and calls `Q_IMPORT_QML_PLUGIN(Phosphor_ComponentsPlugin)` |
 | `PhosphorComponentsQmlShared` and `PhosphorComponentsQmlSharedplugin` | The same module as a plugin installed to `${KDE_INSTALL_QMLDIR}/Phosphor/Components`, built when `PHOSPHOR_COMPONENTS_QML_INSTALL` is ON (the default) |
 | `phosphor_components_translations` | The compiled catalogs, installed to `share/phosphor-works/translations` |
+| `PhosphorComponents` package | Installed by a top-level build with the installed plugin. `find_package(PhosphorComponents 0.1)` gives `PHOSPHOR_COMPONENTS_QML_DIR` and `PHOSPHOR_COMPONENTS_TRANSLATIONS_DIR`, for a host that uses the installed module. It has no target |
 | `phosphor-components-update-ts` | Runs `lupdate -no-obsolete` over the module's QML into every `.ts` |
 
 There is no C++ namespace, public header, include path or export macro. The module has QML files only.

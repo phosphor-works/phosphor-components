@@ -83,6 +83,34 @@ list(APPEND CMAKE_MODULE_PATH "${PHOSPHOR_LIBS_CMAKE_DIR}")
 add_subdirectory(libs/phosphor-components) # Phosphor.Components QML module and its catalog
 
 if(PHOSPHOR_COMPONENTS_TOP_LEVEL)
+    # The PhosphorComponents package (cmake/PhosphorComponentsConfig.cmake.in),
+    # for a host that uses the installed module. Only a top-level build installs
+    # it, and only with the installed module.
+    if(PHOSPHOR_COMPONENTS_QML_INSTALL)
+        include(CMakePackageConfigHelpers)
+        set(_phosphor_components_package_dir "${KDE_INSTALL_LIBDIR}/cmake/PhosphorComponents")
+        set(PHOSPHOR_COMPONENTS_QML_INSTALL_DIR "${KDE_INSTALL_QMLDIR}/Phosphor/Components")
+        set(PHOSPHOR_COMPONENTS_TRANSLATIONS_INSTALL_DIR
+            "${KDE_INSTALL_DATADIR}/${PHOSPHOR_SUITE_DIRECTORY_NAME}/translations")
+        configure_package_config_file(
+            "${CMAKE_CURRENT_SOURCE_DIR}/cmake/PhosphorComponentsConfig.cmake.in"
+            "${CMAKE_CURRENT_BINARY_DIR}/PhosphorComponentsConfig.cmake"
+            INSTALL_DESTINATION "${_phosphor_components_package_dir}"
+            PATH_VARS PHOSPHOR_COMPONENTS_QML_INSTALL_DIR PHOSPHOR_COMPONENTS_TRANSLATIONS_INSTALL_DIR
+        )
+        write_basic_package_version_file(
+            "${CMAKE_CURRENT_BINARY_DIR}/PhosphorComponentsConfigVersion.cmake"
+            VERSION ${PROJECT_VERSION}
+            COMPATIBILITY SameMinorVersion
+            ARCH_INDEPENDENT
+        )
+        install(FILES
+            "${CMAKE_CURRENT_BINARY_DIR}/PhosphorComponentsConfig.cmake"
+            "${CMAKE_CURRENT_BINARY_DIR}/PhosphorComponentsConfigVersion.cmake"
+            DESTINATION "${_phosphor_components_package_dir}"
+        )
+    endif()
+
     feature_summary(WHAT REQUIRED_PACKAGES_FOUND REQUIRED_PACKAGES_NOT_FOUND
                          OPTIONAL_PACKAGES_FOUND OPTIONAL_PACKAGES_NOT_FOUND
                     FATAL_ON_MISSING_REQUIRED_PACKAGES)

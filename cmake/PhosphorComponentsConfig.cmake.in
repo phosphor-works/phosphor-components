@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2026 Phosphor Works Team
+# SPDX-License-Identifier: LGPL-2.1-or-later
+#
+# The PhosphorComponents package: the installed Phosphor.Components module, for
+# a host that uses the packaged module instead of building the pinned archive
+# in its own tree.
+#
+#   find_package(PhosphorComponents 0.1 REQUIRED)
+#
+# The module has QML files only and no C++ library, so the package has no
+# target to link. The host imports Phosphor.Components from the QML directory at
+# run time, and loads the phosphor-components catalog from
+# PHOSPHOR_COMPONENTS_TRANSLATIONS_DIR with a QTranslator.
+
+@PACKAGE_INIT@
+
+set_and_check(PHOSPHOR_COMPONENTS_QML_DIR "@PACKAGE_PHOSPHOR_COMPONENTS_QML_INSTALL_DIR@")
+set(PHOSPHOR_COMPONENTS_TRANSLATIONS_DIR "@PACKAGE_PHOSPHOR_COMPONENTS_TRANSLATIONS_INSTALL_DIR@")
+set(PHOSPHOR_COMPONENTS_INSTALLED TRUE)
+
+check_required_components(PhosphorComponents)
