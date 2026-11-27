@@ -50,6 +50,12 @@ CPMAddPackage(NAME phosphor-components
 To build the app against a local checkout, configure the app with
 `-DCPM_phosphor-components_SOURCE=/path/to/phosphor-components`.
 
+The app embeds this tree's libraries as it embeds phosphor-libs': with `PHOSPHOR_EMBED_APP` set, the install holds only
+what the app runs, in the app's own directories. See "Use from an app" in the [phosphor-libs
+README](https://github.com/phosphor-works/phosphor-libs#use-from-an-app). Every install rule here goes through the
+functions of phosphor-libs' `cmake/PhosphorSuite.cmake`. The translation catalogs install to
+`share/phosphor-works/translations` either way.
+
 ## Contributing
 
 The suite conventions are in the [workspace](https://github.com/phosphor-works/workspace) repository, in

@@ -92,6 +92,10 @@ qt_add_qml_module(PhosphorComponentsQml
     QML_FILES ${_phosphor_components_qml}
     OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/qml/Phosphor/Components
 )
+if(NOT COMMAND phosphor_install_targets)
+    # Configured on its own: the install functions come with phosphor-libs.
+    find_package(PhosphorPaths REQUIRED)
+endif()
 add_library(PhosphorComponents::PhosphorComponentsQml ALIAS PhosphorComponentsQml)
 target_link_libraries(PhosphorComponentsQml
     PUBLIC
@@ -122,11 +126,11 @@ if(PHOSPHOR_COMPONENTS_QML_INSTALL)
         PREFIX "lib"
     )
     set(_phosphor_components_install_dir "${KDE_INSTALL_QMLDIR}/Phosphor/Components")
-    install(TARGETS PhosphorComponentsQmlShared PhosphorComponentsQmlSharedplugin
+    phosphor_install_devel(TARGETS PhosphorComponentsQmlShared PhosphorComponentsQmlSharedplugin
         RUNTIME DESTINATION ${_phosphor_components_install_dir}
         LIBRARY DESTINATION ${_phosphor_components_install_dir}
     )
-    install(FILES
+    phosphor_install_devel(FILES
             ${CMAKE_BINARY_DIR}/qml_install/Phosphor/Components/qmldir
             ${CMAKE_BINARY_DIR}/qml_install/Phosphor/Components/PhosphorComponentsQmlShared.qmltypes
             ${_phosphor_components_qml}
