@@ -171,7 +171,7 @@ endif()
 # Tests
 # ═══════════════════════════════════════════════════════════════════════════════
 
-if(CMAKE_PROJECT_NAME STREQUAL "PhosphorComponents" OR BUILD_TESTING)
+if(CMAKE_PROJECT_NAME STREQUAL "PhosphorComponents" OR PHOSPHOR_COMPONENTS_TESTS)
     enable_testing()
     add_subdirectory(tests)
 endif()
