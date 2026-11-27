@@ -10,6 +10,11 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). The
 
 ## [Unreleased]
 
+### Changed
+
+- Builds on phosphor-libs `bf8bf88b`, which installs the licence notices of the Wayland protocols that
+  phosphor-wayland compiles in (phosphor-works/PlasmaZones#1193).
+
 ## [0.1.0] - 2026-11-26
 
 The first release. It has 1 library: `phosphor-components`. The tag `v0.1.0` is commit `0f3e7291`, which PlasmaZones pins.
