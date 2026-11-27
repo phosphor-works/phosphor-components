@@ -59,6 +59,15 @@ if(PHOSPHOR_COMPONENTS_TOP_LEVEL)
     find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami)
 endif()
 
+# The libraries' tests build only in this repository's own build, or in a
+# library configured on its own. An app or the workspace superbuild that adds
+# the tree never builds them: each repository runs only its own tests.
+if(BUILD_TESTING AND PHOSPHOR_COMPONENTS_TOP_LEVEL)
+    set(PHOSPHOR_COMPONENTS_TESTS ON)
+else()
+    set(PHOSPHOR_COMPONENTS_TESTS OFF)
+endif()
+
 if(NOT DEFINED QT_MIN_VERSION)
     set(QT_MIN_VERSION "6.10.0")
 endif()
