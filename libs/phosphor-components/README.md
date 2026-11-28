@@ -4,8 +4,8 @@
 # phosphor-components
 
 The `Phosphor.Components` QML module holds the components that the Phosphor apps share. These include layout cards,
-zone previews, badges, popup frames and the shader parameter editor. Kirigami gives them their theme now. The design
-language will change their style.
+zone previews, badges, popup frames and the shader parameter editor. Kirigami gives them their theme now. The tokens
+of `Phosphor.Design` (the `phosphor-design` library) will replace it.
 
 ## Responsibility
 

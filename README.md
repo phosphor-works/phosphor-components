@@ -3,17 +3,21 @@
 
 # phosphor-components
 
-phosphor-components holds the LGPL QML components that the Phosphor apps share, as the `Phosphor.Components` module.
-The components include layout cards, zone previews, badges, popup frames, the shader parameter editor and their
-smaller parts. The overlays, the settings and the editor of PlasmaZones use them. Lambent, Facet and the storybook of
-the design language can also use them. They use [phosphor-libs](https://github.com/phosphor-works/phosphor-libs).
+phosphor-components holds the LGPL QML that the Phosphor apps share, as three modules. `Phosphor.Design` has the
+tokens and the components of the design language. `Phosphor.Style` is its Qt Quick Controls style.
+`Phosphor.Components` has layout cards, zone previews, badges, popup frames and the shader parameter editor, which
+the overlays, the settings and the editor of PlasmaZones use. The
+[design-language](https://github.com/phosphor-works/design-language) repository is the storybook that shows them.
+The modules use [phosphor-libs](https://github.com/phosphor-works/phosphor-libs).
 
 ## Libraries
 
-The library is in `libs/phosphor-components/`.
+Each library is in `libs/`.
 
 | Library | What it is |
 | --- | --- |
+| `phosphor-design` | The `Phosphor.Design` QML module: the tokens, the motion types and the components of the design language |
+| `phosphor-style` | The `Phosphor.Style` QML module: the Qt Quick Controls style that uses the tokens |
 | `phosphor-components` | The `Phosphor.Components` QML module and its translation catalog |
 
 ## Build
@@ -32,7 +36,7 @@ also downloads the archives that this commit pins. The downloads go into `.cache
 cmake --workflow --preset dev
 ```
 
-This command configures into `build/`, builds phosphor-libs and the module, and runs the tests. To build against a
+This command configures into `build/`, builds phosphor-libs and the modules, and runs the tests. To build against a
 local phosphor-libs checkout, add `-DCPM_phosphor-libs_SOURCE=/path/to/phosphor-libs` to the configure.
 
 ## Use from an app

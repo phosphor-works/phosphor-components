@@ -1,0 +1,44 @@
+# SPDX-FileCopyrightText: 2026 Phosphor Works Team
+# SPDX-License-Identifier: LGPL-2.1-or-later
+
+module Phosphor.Design
+singleton Theme 1.0 Theme.qml
+singleton Metrics 1.0 Metrics.qml
+singleton Motion 1.0 Motion.qml
+singleton Icons 1.0 Icons.qml
+Artwork 1.0 Artwork.qml
+Avatar 1.0 Avatar.qml
+Badge 1.0 Badge.qml
+BarChip 1.0 BarChip.qml
+Bars 1.0 Bars.qml
+BigSlider 1.0 BigSlider.qml
+Fade 1.0 Fade.qml
+FlowSpring 1.0 FlowSpring.qml
+FocusRing 1.0 FocusRing.qml
+Icon 1.0 Icon.qml
+IconButton 1.0 IconButton.qml
+Keycap 1.0 Keycap.qml
+LayoutPreview 1.0 LayoutPreview.qml
+ListRow 1.0 ListRow.qml
+Meter 1.0 Meter.qml
+MonthGrid 1.0 MonthGrid.qml
+NavList 1.0 NavList.qml
+NotificationCard 1.0 NotificationCard.qml
+PanelHeader 1.0 PanelHeader.qml
+PanelPage 1.0 PanelPage.qml
+Segmented 1.0 Segmented.qml
+SettingGroup 1.0 SettingGroup.qml
+SettingRow 1.0 SettingRow.qml
+ShellBody 1.0 ShellBody.qml
+SnapSpring 1.0 SnapSpring.qml
+Sparkline 1.0 Sparkline.qml
+Spinner 1.0 Spinner.qml
+StretchIndicator 1.0 StretchIndicator.qml
+Surface 1.0 Surface.qml
+SwatchPicker 1.0 SwatchPicker.qml
+Tile 1.0 Tile.qml
+Tint 1.0 Tint.qml
+TrailSpring 1.0 TrailSpring.qml
+Visualizer 1.0 Visualizer.qml
+WindowFrame 1.0 WindowFrame.qml
+WorkspaceStrip 1.0 WorkspaceStrip.qml

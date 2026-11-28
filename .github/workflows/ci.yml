@@ -38,5 +38,9 @@ jobs:
         module=$(find result/lib -path '*/Phosphor/Components/qmldir' | head -1)
         test -n "$module" || { echo "::error::the package installed no Phosphor.Components module"; exit 1; }
         echo "Module: $(dirname "$module")"
+        for name in Design Style; do
+          find result/lib -path "*/Phosphor/$name/qmldir" | grep -q . \
+            || { echo "::error::the package installed no Phosphor.$name module"; exit 1; }
+        done
         test -e result/share/phosphor-works/translations/phosphor-components_en.qm \
           || { echo "::error::the package installed no phosphor-components catalog"; exit 1; }
