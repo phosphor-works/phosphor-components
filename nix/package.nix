@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2026 Phosphor Works Team
 # SPDX-License-Identifier: LGPL-2.1-or-later
 #
-# The phosphor-components package: the Phosphor.Components QML module and its
+# The phosphor-components package: the three QML modules and the
 # catalogs, built with the phosphor-libs commit
 # cmake/PhosphorComponentsDependencies.cmake pins, whose libraries the package
 # includes. `withTests` builds and runs the test suite (phosphor-libs'

@@ -89,6 +89,8 @@ phosphor_components_add_phosphor_libs()
 include("${PHOSPHOR_LIBS_CMAKE_DIR}/PhosphorSuite.cmake")
 list(APPEND CMAKE_MODULE_PATH "${PHOSPHOR_LIBS_CMAKE_DIR}")
 
+add_subdirectory(libs/phosphor-design)     # Phosphor.Design: tokens, motion types and components
+add_subdirectory(libs/phosphor-style)      # Phosphor.Style: the Qt Quick Controls style, on Phosphor.Design
 add_subdirectory(libs/phosphor-components) # Phosphor.Components QML module and its catalog
 
 if(PHOSPHOR_COMPONENTS_TOP_LEVEL)
